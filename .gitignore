@@ -1,3 +1,7 @@
+# for docker 
+devops/db-data/*
+devops/dump-data/*
+
 # Logs
 logs
 *.log

@@ -11,6 +11,21 @@ export default class App {
 
     private async createApp() {
 
+        await createConnection({
+            name: "default",
+            driver: {
+                type: "postgres",
+                host: "localhost",
+                port: 5432,
+                username: "postgres",
+                password: "postgres",
+                database: "mydb",
+            },
+            logging: {
+                logQueries: true
+            }
+        });
+
         const app: Koa = new Koa();
         const router: Router = new Router();
 

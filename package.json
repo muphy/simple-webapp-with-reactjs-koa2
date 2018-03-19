@@ -1,68 +1,69 @@
 {
-  "name": "simple-webapp-with-reactjs-koa2",
-  "version": "1.0.0",
-  "description": "simple webapp with reactjs and koa2",
-  "main": "index.js",
-  "scripts": {
-    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' src/index.ts",
-    "build": "tsc --rootDir ./src/",
-    "start": "ts-node src/index.ts",
-    "start:debug": "ts-node --inspect=5858 --debug-brk --ignore false src/index.ts",
-    "test": "node_modules/mocha/bin/mocha -r ts-node/register test/**/*.ts",
-    "test:debug": "node_modules/mocha/bin/mocha --inspect --debug-brk --not-timeouts --compilers ts:ts-node/register test/**/*.spec.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/muphy/simple-webapp-with-reactjs-koa2.git"
-  },
-  "keywords": [
-    "reactjs",
-    "boilerplate",
-    "koa2"
-  ],
-  "author": "muphy",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/muphy/simple-webapp-with-reactjs-koa2/issues"
-  },
-  "homepage": "https://github.com/muphy/simple-webapp-with-reactjs-koa2#readme",
-  "dependencies": {
-    "@types/jsonwebtoken": "^7.2.5",
-    "@types/koa-jwt": "^3.3.0",
-    "dotenv": "^5.0.0",
-    "koa": "^2.2.0",
-    "koa-bodyparser": "^4.2.0",
-    "koa-jsonwebtoken": "^1.3.1",
-    "koa-jwt": "^3.3.0",
-    "koa-logger": "^3.0.0",
-    "koa-router": "^7.1.1",
-    "pg": "^7.4.1",
-    "reflect-metadata": "^0.1.10",
-    "typeorm": "^0.0.11",
-    "typescript-ioc": "^0.4.1",
-    "util.promisify": "^1.0.0"
-  },
-  "devDependencies": {
-    "@types/chai": "^3.5.2",
-    "@types/dotenv": "^4.0.2",
-    "@types/koa": "^2.0.39",
-    "@types/koa-bodyparser": "^3.0.23",
-    "@types/koa-logger": "^2.0.2",
-    "@types/koa-router": "^7.0.22",
-    "@types/mocha": "^2.2.41",
-    "@types/node": "^7.0.55",
-    "@types/shelljs": "^0.7.1",
-    "@types/sinon": "^2.2.2",
-    "@types/sinon-chai": "^2.7.27",
-    "@types/supertest": "^2.0.0",
-    "chai": "^3.5.0",
-    "mocha": "^3.4.1",
-    "shelljs": "^0.7.7",
-    "sinon": "^2.2.0",
-    "sinon-chai": "^2.10.0",
-    "supertest": "^3.0.0",
-    "ts-mockito": "^2.0.0",
-    "ts-node": "^3.0.4",
-    "typescript": "^2.3.2"
+    "name": "simple-webapp-with-reactjs-koa2",
+    "version": "1.0.0",
+    "description": "simple webapp with reactjs and koa2",
+    "main": "index.js",
+    "scripts": {
+      "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' src/index.ts",
+      "build": "tsc --rootDir ./src/",
+      "start": "ts-node src/index.ts",
+      "start:debug": "ts-node --inspect=5858 --debug-brk --ignore false src/index.ts",
+      "test": "node_modules/mocha/bin/mocha -r ts-node/register test/**/*.ts",
+      "test:debug": "node_modules/mocha/bin/mocha --inspect --debug-brk --not-timeouts --compilers ts:ts-node/register test/**/*.spec.ts",
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/muphy/simple-webapp-with-reactjs-koa2.git"
+    },
+    "keywords": [
+      "reactjs",
+      "boilerplate",
+      "koa2"
+    ],
+    "author": "muphy",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/muphy/simple-webapp-with-reactjs-koa2/issues"
+    },
+    "homepage": "https://github.com/muphy/simple-webapp-with-reactjs-koa2#readme",
+    "dependencies": {
+      "@types/jsonwebtoken": "^7.2.5",
+      "@types/koa-jwt": "^3.3.0",
+      "dotenv": "^5.0.0",
+      "koa": "^2.2.0",
+      "koa-bodyparser": "^4.2.0",
+      "koa-jsonwebtoken": "^1.3.1",
+      "koa-jwt": "^3.3.0",
+      "koa-logger": "^3.0.0",
+      "koa-router": "^7.1.1",
+      "mysql": "^2.13.0",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "^0.0.11",
+      "typescript-ioc": "^0.4.1",
+      "util.promisify": "^1.0.0"
+    },
+    "devDependencies": {
+      "@types/chai": "^3.5.2",
+      "@types/dotenv": "^4.0.2",
+      "@types/koa": "^2.0.39",
+      "@types/koa-bodyparser": "^3.0.23",
+      "@types/koa-logger": "^2.0.2",
+      "@types/koa-router": "^7.0.22",
+      "@types/mocha": "^2.2.41",
+      "@types/node": "^7.0.55",
+      "@types/shelljs": "^0.7.1",
+      "@types/sinon": "^2.2.2",
+      "@types/sinon-chai": "^2.7.27",
+      "@types/supertest": "^2.0.0",
+      "chai": "^3.5.0",
+      "mocha": "^3.4.1",
+      "shelljs": "^0.7.7",
+      "sinon": "^2.2.0",
+      "sinon-chai": "^2.10.0",
+      "supertest": "^3.0.0",
+      "ts-mockito": "^2.0.0",
+      "ts-node": "^3.0.4",
+      "typescript": "^2.3.2"
+    }
   }
-}
+  

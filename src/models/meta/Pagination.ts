@@ -17,6 +17,9 @@ export class PageQuery {
     }
 
     getCurrentPage(): number {
+        if (this.currentPage < 0) {
+            this.currentPage = 0;
+        }
         return this.currentPage;
     }
 
@@ -50,14 +53,14 @@ export class PageResult<T> {
     }
 
     hasNextPage() {
-        return this.total > ( this.pageQuery.getCurrentPage() * this.pageQuery.getLimit());
+        return this.total > (this.pageQuery.getCurrentPage() * this.pageQuery.getLimit());
     }
 
     getPages() {
         return Math.ceil(this.total / this.pageQuery.getLimit());
     }
     paginate(): IPageResult<T> {
-        const pageResult = {} as IPageResult<T>;
+        const pageResult: IPageResult<T> = {} as IPageResult<T>;
         pageResult.total = this.total;
         pageResult.per_page = this.pageQuery.getLimit();
         pageResult.pages = this.getPages();

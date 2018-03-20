@@ -6,8 +6,10 @@ import { User } from "../models/User";
 @Singleton
 export default class UserRepository extends IRepository {
 
-    public async getUsersByOffset(offset:number, limit: number): Promise<[User[], number]> {
+    public async getUsersByOffset(offset: number, limit: number): Promise<[User[], number]> {
         return this.getUserRepository().createQueryBuilder("user")
-        .setLimit(limit).setOffset(offset).getManyAndCount();
+            .setLimit(limit)
+            .setOffset(offset)
+            .getManyAndCount();
     }
 }

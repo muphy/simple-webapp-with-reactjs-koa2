@@ -30,3 +30,4 @@ simple SPA with reactjs and koa2
 
 ### todo list
 - [ ] 설치 자동화 스크립트 작성하기
+- [ ] 사용자 목록 결과 페이지 결과값 손보기

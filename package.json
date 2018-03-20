@@ -8,6 +8,8 @@
     "build": "tsc --rootDir src/",
     "start": "ts-node src/index.ts",
     "start:debug": "ts-node --inspect=5858 --debug-brk --ignore false src/index.ts",
+    "start:client": "cd client && npm run start",
+    "start:dev": "concurrently --kill-others-on-fail \"npm run start\" \"npm run start:client\"",
     "test": "node_modules/mocha/bin/mocha -r ts-node/register test/**/*.spec.ts",
     "test:debug": "node_modules/mocha/bin/mocha --inspect --debug-brk --not-timeouts --compilers ts:ts-node/register test/**/*.spec.ts"
   },
@@ -27,6 +29,7 @@
   },
   "homepage": "https://github.com/muphy/simple-webapp-with-reactjs-koa2#readme",
   "dependencies": {
+    "concurrently": "^3.5.1",
     "dotenv": "^5.0.0",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.2.0",

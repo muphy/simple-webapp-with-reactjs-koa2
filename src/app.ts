@@ -53,8 +53,8 @@ export default class App {
 
     public async start() {
         const app = await this.createApp();
-        console.log("Started listening on port 3000...");
-        const server = app.listen(3000);
+        console.log("Started listening on port 4000...");
+        const server = app.listen(4000);
         return Promise.resolve(server);
     }
 

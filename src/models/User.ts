@@ -6,17 +6,22 @@ export class User  {
     @PrimaryColumn("uuid")
     id: string;
 
-    @Column()
+    @Column("string")
     name: string;
-    @Column()
+    
+    @Column("string")
     gender:string;
-    @Column()
+    
+    @Column("number")
     age: number;
-    @Column()
+    
+    @Column("number")
     ages: number;
-    @Column()
+    
+    @Column("string")
     phone: string;
-    @Column()
+    
+    @Column("date")
     birthdate: Date;
 
 }

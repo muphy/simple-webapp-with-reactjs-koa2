@@ -21,6 +21,7 @@ export default class App {
                 password: "postgres",
                 database: "mydb",
             },
+            entities: ["./models/*"],
             logging: {
                 logQueries: true
             }

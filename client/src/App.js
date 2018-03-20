@@ -42,7 +42,7 @@ export default class App extends Component {
     return (
       <div class="container">
         <h2>사용자 정보</h2>
-        <p>성별 정보가 없는 경우는 미입력으로 표시된다.</p>
+        <p>성별 정보가 없는 경우는 표시되지 않는다.</p>
         <UserList users={this.state.users} />
         <div class="text-center">
           <Pagination

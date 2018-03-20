@@ -19,6 +19,26 @@ simple SPA with reactjs and koa2
 2. root 폴더에서 `npm run start:dev`를 통해 웹서버 실행
 3. `http://localhost:3000/`으로 접속
 
+## Web API 목록
+### 회원 관련
+1. 회원 가입 
+- url: [http://localhost:3000/api/public/users]
+- method: `GET`
+- headers
+```
+Content-Type: application/json
+```
+- request query params
+```
+current_page=1
+limit=10
+```
+- 참고: `current_page 는 현재 페이지. 기본값은 1, limit 은 한 번에 가져올 목록수 기본값은 10`
+- 예시
+```
+http://localhost:3000/api/public/users?current_page=2&limit=15
+```
+
 ## Technologies used:
 
 ### backend

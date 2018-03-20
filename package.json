@@ -8,7 +8,7 @@
     "build": "tsc --rootDir src/",
     "start": "ts-node src/index.ts",
     "start:debug": "ts-node --inspect=5858 --debug-brk --ignore false src/index.ts",
-    "test": "node_modules/mocha/bin/mocha -r ts-node/register test/**/*.ts",
+    "test": "node_modules/mocha/bin/mocha -r ts-node/register test/**/*.spec.ts",
     "test:debug": "node_modules/mocha/bin/mocha --inspect --debug-brk --not-timeouts --compilers ts:ts-node/register test/**/*.spec.ts"
   },
   "repository": {

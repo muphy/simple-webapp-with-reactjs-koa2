@@ -12,7 +12,7 @@ export default class UserController {
     public async getUsers(ctx: IRouterContext) {
         try {
             const url = ctx.url;
-            const currentPage = ctx.query.currentPage;
+            const currentPage = ctx.query.current_page;
             const limit = ctx.query.limit;
             const pageQuery = new PageQuery(currentPage, limit);
             const result = await this.userService.getUsers(pageQuery, url);
@@ -23,3 +23,4 @@ export default class UserController {
             ctx.body = e.message;
         }
     }
+}

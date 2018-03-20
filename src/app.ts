@@ -7,8 +7,15 @@ import * as jwt from "koa-jwt";
 import { createConnection } from "typeorm";
 import { Inject } from "typescript-ioc";
 
+import UserRoutes from "./routes/UserRoutes";
+import { User } from "./models/User";
+
 export default class App {
 
+    constructor(
+        @Inject private userRoutes: UserRoutes) {
+
+    }
     private async createApp() {
 
         await createConnection({
@@ -21,7 +28,7 @@ export default class App {
                 password: "postgres",
                 database: "mydb",
             },
-            entities: ["./models/*"],
+            entities: [User],
             logging: {
                 logQueries: true
             }
@@ -30,13 +37,15 @@ export default class App {
         const app: Koa = new Koa();
         const router: Router = new Router();
 
+        this.userRoutes.register(router);
+
         // Middleware below this line is only reached if JWT token is valid
         // unless the URL starts with '/public'
         //ctx.state.user
         app.use(logger());
         app.use(bodyParser());
         app.use(router.allowedMethods());
-        app.use(jwt({ secret: "dnc" }).unless({ path: [/^\/api\/public/, /^\/public/] }));
+        // app.use(jwt({ secret: "secret" }).unless({ path: [/^\/api\/public/, /^\/public/] }));
         app.use(router.routes());
 
         return Promise.resolve(app);

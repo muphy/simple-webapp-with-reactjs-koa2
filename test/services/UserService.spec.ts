@@ -41,6 +41,11 @@ describe("UserService", () => {
             expect(result.current_page).to.equal(1);
             expect(result.data.length).to.equal(10);
             expect(result.data[0].id).to.equal("e53f1c8d-7109-47b7-b3ae-fb9a6605ecb3");
+
+            //Test second page result
+            pageQuery.setCurrentPage(2);
+            const result2 = await userService.getUsers(pageQuery,"defaulturl");
+            expect(result2.data[0].id).to.equal("e1507098-f661-4c71-99c2-1592fe6ceaec");
         });
     });
 });

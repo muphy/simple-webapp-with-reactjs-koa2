@@ -9,7 +9,7 @@ export class PageQuery {
     }
 
     getOffset(): number {
-        return this.currentPage - 1;
+        return (this.currentPage - 1) * this.limit;
     }
 
     getLimit(): number {
